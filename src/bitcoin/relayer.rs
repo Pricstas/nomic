@@ -493,6 +493,7 @@ impl Relayer {
                             sigset_index,
                             miner_fee_rate,
                             bridge_fee_rate,
+                            dest: dest.clone(),
                         },
                     )
                 }
@@ -990,6 +991,7 @@ impl Relayer {
                     sigset_index,
                     miner_fee_rate,
                     bridge_fee_rate,
+                    dest: dest.clone(),
                 },
             );
         }
