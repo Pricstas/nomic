@@ -1,4 +1,4 @@
-use crate::error::Result;
+use crate::{app::Dest, error::Result};
 use bitcoin::{Address, Txid};
 use serde::{Deserialize, Serialize};
 use std::collections::HashMap;
@@ -13,6 +13,7 @@ pub struct Deposit {
     pub sigset_index: u32,
     pub miner_fee_rate: f64,
     pub bridge_fee_rate: f64,
+    pub dest: Dest,
 }
 
 #[derive(Clone, Debug, Serialize, Deserialize)]
